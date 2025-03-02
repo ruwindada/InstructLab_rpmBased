@@ -1,0 +1,10 @@
+---
+- name: Register host in Satellite
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Register new host in Satellite
+      import_role:
+        name: register_host
