@@ -1,0 +1,12 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Use my custom Ansible module
+      my_module:
+        param1: value1
+        param2: value2
+      register: result
+
+    - name: Display the result
+      debug:
+        var: result
