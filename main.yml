@@ -1,10 +1,10 @@
 ---
-- name: Register host in Satellite
+- name: InstructLab Setup for RPM based systems
   hosts: all
   become: yes
   gather_facts: yes
 
   tasks:
-    - name: Register new host in Satellite
+    - name: Install, configure InstructLab
       import_role:
-        name: register_host
+        name: InstructLab_rpmBased
