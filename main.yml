@@ -1,10 +1,14 @@
 ---
 - name: InstructLab Setup for RPM based systems
-  hosts: all
+  hosts: localhost
   become: yes
   gather_facts: yes
 
   tasks:
+    - name: Gather facts
+      ansible.builtin.setup:
+        gather_subset:
+          - 'all'
     - name: Install, configure InstructLab
       import_role:
         name: InstructLab_rpmBased
