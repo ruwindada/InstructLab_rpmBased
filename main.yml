@@ -3,7 +3,8 @@
   hosts: localhost
   become: yes
   gather_facts: yes
-
+  vars_files:
+    - vault.yml  # Include the vault file
   tasks:
     - name: Gather facts
       ansible.builtin.setup:
