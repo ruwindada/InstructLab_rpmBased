@@ -4,7 +4,5 @@
   become: yes
   gather_facts: yes
 
-  tasks:
-    - name: InstructLab Setup
-      import_role:
-        name: ilabsetup
+  roles:
+    - role: "~rfernando/Documents/Projects/InstructLab_rpmBased/roles/ilabsetup"
